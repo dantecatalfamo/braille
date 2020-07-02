@@ -50,9 +50,10 @@ function renderFunction(board, fun) {
   return render(board);
 }
 
-let r = 0;
+let r = HEIGHT;
 function fun(x, y) {
-  return (x+r) % 6 == (y+r) % 10;
+  return x/2 == Math.abs(y+r) % 30 ||
+    x/2 == Math.abs(y-r) % 30;
 }
 
 const interval = setInterval(() => {
