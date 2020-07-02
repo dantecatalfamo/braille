@@ -51,31 +51,11 @@ function renderFunction(board, fun) {
 }
 
 let r = 0;
-let r2 = 10;
-let r3 = 20;
-let r4 = 30;
-let r5 = 40;
 function fun(x, y) {
-  const offset = HEIGHT / 2;
-  return Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r, 2) ||
-    Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r2, 2) ||
-    Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r3, 2) ||
-    Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r4, 2) ||
-    Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r5, 2);
-  // return x == y || x == HEIGHT - y;
+  return (x+r) % 6 == (y+r) % 10;
 }
 
 const interval = setInterval(() => {
   r++;
-  r2++;
-  r3++;
-  r4++;
-  r5++;
-  if (r > 50) r = 0;
-  if (r2 > 50) r2 = 0;
-  if (r3 > 50) r3 = 0;
-  if (r4 > 50) r4 = 0;
-  if (r5 > 50) r5 = 0;
-
   br.innerHTML = renderFunction(board, fun);
 }, 100);
