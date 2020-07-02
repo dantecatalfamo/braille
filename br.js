@@ -55,10 +55,12 @@ function fun(x, y, frame) {
   const l = 40;
   const m1 = Math.abs(y+frame) % l;
   const m2 = Math.abs(y-frame) % l;
-  return x/2 == m1 ||
-    x/2 == m2 ||
-    x/2 == m1 + l ||
-    x/2 == m2 + l;
+  return x == m1 ||
+    x == m2 ||
+    x/2 == m1 + l/2 ||
+    x/2 == m2 + l/2 ||
+    x == m1 + 3*l ||
+    x == m2 + 3*l;
 }
 
 let frame = 0;
