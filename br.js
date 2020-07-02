@@ -51,7 +51,6 @@ function renderFunction(board, fun, frame) {
 }
 
 function fun(x, y, frame) {
-  frame += HEIGHT;
   const l = HEIGHT / 3;
   const m1 = Math.abs(y+frame) % l;
   const m2 = Math.abs(y-frame) % l;
@@ -63,7 +62,7 @@ function fun(x, y, frame) {
     x == m2 + 3*l;
 }
 
-let frame = 0;
+let frame = HEIGHT;
 const interval = setInterval(() => {
   br.innerHTML = renderFunction(board, fun, frame++);
 }, 100);
