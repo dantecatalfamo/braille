@@ -63,7 +63,7 @@ function fun(x, y) {
     Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r3, 2) ||
     Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r4, 2) ||
     Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r5, 2);
-  return x == y || x == HEIGHT - y;
+  // return x == y || x == HEIGHT - y;
 }
 
 const interval = setInterval(() => {
