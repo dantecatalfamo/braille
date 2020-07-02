@@ -52,8 +52,13 @@ function renderFunction(board, fun) {
 
 let r = HEIGHT;
 function fun(x, y) {
-  return x/2 == Math.abs(y+r) % 30 ||
-    x/2 == Math.abs(y-r) % 30;
+  const l = 40;
+  const m1 = Math.abs(y+r) % l;
+  const m2 = Math.abs(y-r) % l;
+  return x/2 == m1 ||
+    x/2 == m2 ||
+    x/2 == m1 + l ||
+    x/2 == m2 + l;
 }
 
 const interval = setInterval(() => {
