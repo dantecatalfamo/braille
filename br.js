@@ -52,7 +52,7 @@ function renderFunction(board, fun, frame) {
 
 function fun(x, y, frame) {
   frame += HEIGHT;
-  const l = 40;
+  const l = HEIGHT / 3;
   const m1 = Math.abs(y+frame) % l;
   const m2 = Math.abs(y-frame) % l;
   return x == m1 ||
