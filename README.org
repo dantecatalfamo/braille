@@ -1,0 +1,3 @@
+* braille
+  A 2am project to render a 2d array of true/false values using
+  braille characters
