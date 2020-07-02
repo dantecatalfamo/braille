@@ -57,7 +57,6 @@ let r4 = 30;
 let r5 = 40;
 function fun(x, y) {
   const offset = HEIGHT / 2;
-  const thicc = 2;
   return Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r, 2) ||
     Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r2, 2) ||
     Math.pow(x-offset, 2) + Math.pow(y-offset, 2) == Math.pow(r3, 2) ||
