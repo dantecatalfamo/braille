@@ -41,27 +41,27 @@ function render(board) {
   return out.reduce((a, r) => a + r.reduce((a2, c) => a2 + c) + "\n", "");
 }
 
-function renderFunction(board, fun) {
+function renderFunction(board, fun, frame) {
   for (let y = 0; y < HEIGHT; y++) {
     for (let x = 0; x < WIDTH; x++) {
-      board[y][x] = fun(x, y) ? true : null;
+      board[y][x] = fun(x, y, frame) ? true : null;
     }
   }
   return render(board);
 }
 
-let r = HEIGHT;
-function fun(x, y) {
+function fun(x, y, frame) {
+  frame += HEIGHT;
   const l = 40;
-  const m1 = Math.abs(y+r) % l;
-  const m2 = Math.abs(y-r) % l;
+  const m1 = Math.abs(y+frame) % l;
+  const m2 = Math.abs(y-frame) % l;
   return x/2 == m1 ||
     x/2 == m2 ||
     x/2 == m1 + l ||
     x/2 == m2 + l;
 }
 
+let frame = 0;
 const interval = setInterval(() => {
-  r++;
-  br.innerHTML = renderFunction(board, fun);
+  br.innerHTML = renderFunction(board, fun, frame++);
 }, 100);
