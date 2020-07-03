@@ -65,4 +65,4 @@ function fun(x, y, frame) {
 let frame = HEIGHT;
 const interval = setInterval(() => {
   br.innerHTML = renderFunction(board, fun, frame++);
-}, 100);
+}, 50);
