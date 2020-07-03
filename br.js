@@ -1,9 +1,9 @@
 "use strict";
 
-const OUTWIDTH = 80;
-const OUTHEIGHT = 40;
-const WIDTH = 2 * OUTWIDTH;
+const OUTHEIGHT = 20;
+const OUTWIDTH = 2 * OUTHEIGHT;
 const HEIGHT = 3 * OUTHEIGHT;
+const WIDTH = 2 * OUTWIDTH;
 const BRAILLE = [
   "⠀", "⠁", "⠂", "⠃", "⠄", "⠅", "⠆", "⠇", "⠈", "⠉", "⠊", "⠋", "⠌", "⠍", "⠎", "⠏",
   "⠐", "⠑", "⠒", "⠓", "⠔", "⠕", "⠖", "⠗", "⠘", "⠙", "⠚", "⠛", "⠜", "⠝", "⠞", "⠟",
