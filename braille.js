@@ -11,8 +11,6 @@ const BRAILLE = [
   "⠰", "⠱", "⠲", "⠳", "⠴", "⠵", "⠶", "⠷", "⠸", "⠹", "⠺", "⠻", "⠼", "⠽", "⠾", "⠿",
 ];
 
-const br = document.getElementById("br");
-
 let board = new Array(HEIGHT);
 for (let i = 0; i < HEIGHT; i++) {
   board[i] = new Array(WIDTH);
@@ -62,6 +60,7 @@ function fun(x, y, frame) {
     x == m2 + 3*l;
 }
 
+const br = document.getElementById("braille");
 let frame = HEIGHT;
 const interval = setInterval(() => {
   br.innerHTML = renderFunction(board, fun, frame++);
